@@ -12,32 +12,43 @@ The whole project will take up a span of 9 weeks. In this duration i will attemp
 
 - [Environment](#Environment)
 
-- [Summary](#Summary)
+- [Findings Summary](#Summary)
 
 - [Progress](#Progress)
 
 - [Sources](#Sources)
 
+## Goal
 
 
 ## Objectives
 
-## Environment 
-I am running on Ubuntu 19.10(x86_64) with Jupyter Lab(Jupyter notebook would suffice for testing the code) with python 3.7.4. The required packages will be listed along the code in **requirements.txt**(provided later). I will attempt to document all the installation steps for specific packages if necessary.
+## Environment and Build
+I am running on Ubuntu 19.10(x86_64) with Jupyter Lab(Jupyter notebook would suffice for testing the code) with python 3.7.4. Further inspections can be seen [here!](https://github.com/szacharias/COVID19-Analysis/blob/master/Code/Environment.ipynb) <br>
+To start jupyter notebook/lab, input
+```
+jupyter notebook
+jupyter lab
+```
+and navigate to [http://localhost:8888](http://localhost:8888). Port 8888 by default.
+<br>
+The required packages will be listed along the code in _requirements_ (provided later).
+Run the following commands for the first time
+```
+pip install -r ./code/requirements.txt
+```
+ <br>
 
-## Summary 
+
+## Findings Summary 
 
 
 
 ## Progress
-Week 1
-- [ ] User Interface 
-- [X] test
-
-Week 2
-- [ ] Some Objectives 
-
-
+Week 1, June 11th / June 18th
+- [X] Github Markdown
+- [] Read provided sources
+- [] Start implementations
 
 
 ## Sources 
