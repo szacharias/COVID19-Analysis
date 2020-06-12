@@ -1,7 +1,10 @@
 # COVID-19 Analysis
-This is my interpretation of the COVID19 data 
+This is my interpretation of the COVID19 data. <br>
+The whole project will take up a span of 9 weeks. In this duration i will attempt to develop and optimize a deliverable software project. [Reference materials will be listed at the very bottom.](#Sources)
 
 ## Index
+
+- [Description](#Description)
 
 - [Goal](#Goal)
 
@@ -11,14 +14,28 @@ This is my interpretation of the COVID19 data
 
 - [Summary](#Summary)
 
+- [Progress](#Progress)
+
 - [Sources](#Sources)
 
 
 
 ## Objectives
-- [ ]test
-- [ ] test2
+
+## Environment 
+I am running on Ubuntu 19.10(x86_64) with Jupyter Lab(Jupyter notebook would suffice for testing the code) with python 3.7.4. The required packages will be listed along the code in **requirements.txt**(provided later). I will attempt to document all the installation steps for specific packages if necessary.
+
+## Summary 
+
+
+
+## Progress
+Week 1
+- [ ] User Interface 
 - [X] test
+
+Week 2
+- [ ] Some Objectives 
 
 
 
