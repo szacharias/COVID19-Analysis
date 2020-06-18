@@ -47,8 +47,8 @@ pip install -r ./code/requirements.txt
 ## Progress
 Week 1, June 11th / June 18th
 - [X] Github Markdown
-- [] Read provided sources
-- [] Start implementations
+- [ ] Read provided sources
+- [ ] Start implementations
 
 
 ## Sources 
@@ -66,3 +66,16 @@ Week 1, June 11th / June 18th
 - [Building your own COVID-19 Model](https://towardsdatascience.com/building-your-own-covid-19-epidemic-simple-model-using-python-e39788fbda55)
 
 - [COVID-19 Visualization](https://towardsdatascience.com/visualise-covid-19-case-data-using-python-dash-and-plotly-e58feb34f70f)
+
+#### Datasets
+- [John Hopkins Dataset](https://github.com/CSSEGISandData/COVID-19/)
+
+- [Dataset](https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/)
+
+- [Model Code](https://github.com/DataForScience/Epidemiology101/blob/master/Epidemiology001.ipynb)
+
+- [Berkeley COVID-19 Dashboard](https://covidvis.berkeley.edu/?fbclid=IwAR3Tax0-IzkqEZ_7ZPyddaMhIoEDnSDTsetxLCK57arcxALggCrxgi6zRmY)
+
+- [New York Times](https://github.com/nytimes/covid-19-data)
+
+- [Enhanced Dataset](https://github.com/covidvis/covid19-vis/blob/master/data/quarantine-activity-US-Apr16-long.csv)
