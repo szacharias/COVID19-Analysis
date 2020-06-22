@@ -1,0 +1,46 @@
+1. AI to identify, track and forecast outbreaks
+
+The better we can track the virus, the better we can fight it. By analyzing news reports, social media platforms, and government documents, AI can learn to detect an outbreak. Tracking infectious disease risks by using AI is exactly the service Canadian startup BlueDot provides. In fact, the BlueDot’s AI warned of the threat several days before the Centers for Disease Control and Prevention or the World Health Organization issued their public warnings.
+
+2. AI to help diagnose the virus
+
+Artificial intelligence company Infervision launched a coronavirus AI solution that helps front-line healthcare workers detect and monitor the disease efficiently. Imaging departments in healthcare facilities are being taxed with the increased workload created by the virus. This solution improves CT diagnosis speed. Chinese e-commerce giant Alibaba also built an AI-powered diagnosis system they claim is 96% accurate at diagnosing the virus in seconds.
+
+3. Process healthcare claims
+
+It’s not only the clinical operations of healthcare systems that are being taxed but also the business and administrative divisions as they deal with the surge of patients. A blockchain platform offered by Ant Financial helps speed up claims processing and reduces the amount of face-to-face interaction between patients and hospital staff.
+Most Popular In: Enterprise Tech
+
+    Covid-19 Nearly Killed $4 Billion Corporate Travel Startup TripActions. Now It Has A $125 Million Lifeline.
+    Microsoft Tried To Sell Facial Recognition Tech To The DEA Even As It Called For Regulation On Government Use
+    How Coronavirus Will Change The Job Market Forever
+
+4. Drones deliver medical supplies
+
+One of the safest and fastest ways to get medical supplies where they need to go during a disease outbreak is with drone delivery. Terra Drone is using its unmanned aerial vehicles to transport medical samples and quarantine material with minimal risk between Xinchang County’s disease control centre and the People’s Hospital. Drones also are used to patrol public spaces, track non-compliance to quarantine mandates, and for thermal imaging.
+
+5. Robots sterilize, deliver food and supplies and perform other tasks
+
+Robots aren’t susceptible to the virus, so they are being deployed to complete many tasks such as cleaning and sterilizing and delivering food and medicine to reduce the amount of human-to-human contact. UVD robots from Blue Ocean Robotics use ultraviolet light to autonomously kill bacteria and viruses. In China, Pudu Technology deployed its robots that are typically used in the catering industry to more than 40 hospitals around the country.
+
+6. Develop drugs
+
+Google’s DeepMind division used its latest AI algorithms and its computing power to understand the proteins that might make up the virus, and published the findings to help others develop treatments.  BenevolentAI uses AI systems to build drugs that can fight the world’s toughest diseases and is now helping support the efforts to treat coronavirus, the first time the company focused its product on infectious diseases. Within weeks of the outbreak, it used its predictive capabilities to propose existing drugs that might be useful.  
+
+7. Advanced fabrics offer protection
+
+Companies such as Israeli startup Sonovia hope to arm healthcare systems and others with face masks made from their anti-pathogen, anti-bacterial fabric that relies on metal-oxide nanoparticles.
+
+8. AI to identify non-compliance or infected individuals
+
+While certainly a controversial use of technology and AI, China’s sophisticated surveillance system used facial recognition technology and temperature detection software from SenseTime to identify people who might have a fever and be more likely to have the virus. Similar technology powers "smart helmets" used by officials in Sichuan province to identify people with fevers. The Chinese government has also developed a monitoring system called Health Code that uses big data to identify and assesses the risk of each individual based on their travel history, how much time they have spent in virus hotspots, and potential exposure to people carrying the virus. Citizens are assigned a color code (red, yellow, or green), which they can access via the popular apps WeChat or Alipay to indicate if they should be quarantined or allowed in public.
+
+9. Chatbots to share information
+
+Tencent operates WeChat, and people can access free online health consultation services through it. Chatbots have also been essential communication tools for service providers in the travel and tourism industry to keep travelers updated on the latest travel procedures and disruptions.
+
+10. Supercomputers working on a coronavirus vaccine
+
+The cloud computing resources and supercomputers of several major tech companies such as Tencent, DiDi, and Huawei are being used by researchers to fast-track the development of a cure or vaccine for the virus. The speed these systems can run calculations and model solutions is much faster than standard computer processing.
+
+In a global pandemic such as COVID-19, technology, artificial intelligence, and data science have become critical to helping societies effectively deal with the outbreak.

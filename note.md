@@ -32,8 +32,6 @@
 
 - [Epidemic Modeling 2 - some models are useful?](https://medium.com/data-for-science/epidemic-modeling-102-all-covid-19-models-are-wrong-but-some-are-useful-c81202cc6ee9)
 
-1. 
-
 
 - [Epidemic Modeling 3 - Confindence Intervals and Stochastic Effects](https://medium.com/data-for-science/epidemic-modeling-103-adding-confidence-intervals-and-stochastic-effects-to-your-covid-19-models-be618b995d6b)
 
@@ -46,5 +44,38 @@
 
 - [COVID-19 Visualization](https://towardsdatascience.com/visualise-covid-19-case-data-using-python-dash-and-plotly-e58feb34f70f)
 
-[Use this as reference](#https://github.com/a2975667/QV-app)
+- [Use this as reference](#https://github.com/a2975667/QV-app)
 
+- [Unsupervised Learning Python ](https://builtin.com/data-science/unsupervised-learning-python)
+
+- [DataCamp Unsupervised Learning Tutorial Python](https://www.datacamp.com/courses/unsupervised-learning-in-python)
+
+- [Python PCA Biplot](https://stackoverflow.com/questions/39216897/plot-pca-loadings-and-loading-in-biplot-in-sklearn-like-rs-autoplot)
+
+- [Python ARIMA tutorial](https://towardsdatascience.com/arima-forecasting-in-python-90d36c2246d3)
+
+- [ARIMA Model – Complete Guide to Time Series Forecasting in Python](https://www.machinelearningplus.com/time-series/arima-model-time-series-forecasting-python/)
+
+- [Building your own Covid-19 Epidemic Simple Model Using Python](https://towardsdatascience.com/building-your-own-covid-19-epidemic-simple-model-using-python-e39788fbda55)
+
+- [How to Create an ARIMA Model for Time Series Forecasting in Python](https://machinelearningmastery.com/arima-for-time-series-forecasting-with-python/)
+
+- [Various Implementations of Collaborative Filtering](https://towardsdatascience.com/various-implementations-of-collaborative-filtering-100385c6dfe0)
+
+- [協同過濾(Collaborative Filtering) 實作](https://ithelp.ithome.com.tw/articles/10220129)
+
+- [Unstructured Learning in Python, K means and Hierarchial Clustering](https://medium.com/datadriveninvestor/unsupervised-learning-with-python-k-means-and-hierarchical-clustering-f36ceeec919c)
+
+- [**How COVID19 pandemic has been tackled by Data Science & Machine Learning**](https://medium.com/@aisavvy89/how-covid19-pandemic-has-been-tackled-by-data-science-machine-learning-7c04235e6e36)
+
+- [Smarter COVID-19 Decision-Making](https://towardsdatascience.com/smarter-covid-19-decision-making-39dbff2ab2ba)
+
+- [A Decision Scientist’s 10 Dos & Don’ts for COVID-19](https://towardsdatascience.com/a-decision-scientists-10-dos-don-ts-for-covid-19-805577bccd67)
+
+- [**AI vs COVID-19. Does it really work?**](https://towardsdatascience.com/ai-vs-covid-19-does-it-really-work-a001c8da990a)
+
+- [How to Get Started Analyzing COVID-19 Data](https://towardsdatascience.com/how-to-get-started-analyzing-covid-19-data-808822437c32)
+
+- [Deploying model with Docker Containers](https://medium.com/analytics-vidhya/machine-learning-deploying-model-using-docker-container-6df27ccdd9e6)
+
+- [Topic Modeling with Non-negative Matrix Factorization(NMF)](https://medium.com/analytics-vidhya/topic-modeling-with-non-negative-matrix-factorization-nmf-3caf3a6bb6da)

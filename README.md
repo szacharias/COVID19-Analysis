@@ -67,6 +67,17 @@ Week 1, June 11th / June 18th
 
 - [COVID-19 Visualization](https://towardsdatascience.com/visualise-covid-19-case-data-using-python-dash-and-plotly-e58feb34f70f)
 
+- [Global Covid-19 Forecasting](https://towardsdatascience.com/global-covid-19-forecasting-with-linear-regression-and-arima-c154c163acc1)
+
+- [Using Kalman Filter to Predict Coronavirus Spread](https://towardsdatascience.com/using-kalman-filter-to-predict-corona-virus-spread-72d91b74cc8)
+
+- [Kalman Filters Sequel - Coronavirus Spread Prediction](https://medium.com/analytics-vidhya/coronavirus-updated-prediction-using-kalman-filter-3ef8b7a72409)
+
+- [COVID-19 Predictions: A Machine Learning and Statistical Approach](https://medium.com/datadriveninvestor/covid-19-predictions-a-machine-learning-and-statistical-approach-410bef74f5c5)
+
+- [COVID-19 and the first war of data science](https://medium.com/starschema-blog/covid-19-and-the-first-war-of-data-science-980798f075ef)
+
+- []()
 #### Datasets
 - [John Hopkins Dataset](https://github.com/CSSEGISandData/COVID-19/)
 
@@ -79,3 +90,16 @@ Week 1, June 11th / June 18th
 - [New York Times](https://github.com/nytimes/covid-19-data)
 
 - [Enhanced Dataset](https://github.com/covidvis/covid19-vis/blob/master/data/quarantine-activity-US-Apr16-long.csv)
+
+- [Cleaned data for COVID19 analysis - starschema](https://github.com/starschema/COVID-19-data)
+
+- [Snowflake - dataset updated daily](https://www.snowflake.com/datasets/starschema/) 
+
+- [COVID-19 Chest XRay Images](https://github.com/ieee8023/covid-chestxray-dataset)
+
+- [Kaggle Chest X-Ray Images](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia)
+#### Libraries
+
+- [qwikidata](https://qwikidata.readthedocs.io/en/stable/readme.html)
+
+- [Outlier Detection](https://www.analyticsvidhya.com/blog/2019/02/outlier-detection-python-pyod/)
