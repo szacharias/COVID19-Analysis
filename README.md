@@ -47,8 +47,11 @@ pip install -r ./code/requirements.txt
 ## Progress
 Week 1, June 11th / June 18th
 - [X] Github Markdown
-- [ ] Read provided sources
-- [ ] Start implementations
+- [X] Read provided sources
+- [X] Start implementations
+Week 2, June 19th / June 26th
+- [] Data Cleaning
+- [] EDA
 
 
 ## Sources 
