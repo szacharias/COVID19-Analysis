@@ -50,8 +50,8 @@ Week 1, June 11th / June 18th
 - [X] Read provided sources
 - [X] Start implementations
 Week 2, June 19th / June 26th
-- [] Data Cleaning
-- [] EDA
+- [ ] Data Cleaning
+- [ ] EDA
 
 
 ## Sources 
