@@ -22,7 +22,11 @@ def df_to_timeseries(single_country, period ):
 #     for i in range(0 , len(instance)-1):
 #         difference_list.append( int(instance[i+1]) - int(instance[i]) ) 
     difference_list = instance.diff(periods = period)
-    return instance_array, difference_list[1:]
+    difference_list = difference_list[1:].dropna().astype(int)
+    
+    instance_array = instance_array[1:].astype(int) 
+    
+    return instance_array, difference_list
 
 # def df_to_timeseries_countries(country):
 #     instance = np.asarray(single_country.drop(["Province/State","Country/Region","Lat","Long"],axis = 1).transpose()) 
