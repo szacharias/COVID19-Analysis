@@ -71,6 +71,36 @@ def plt_all_cases_increase_cases(country , dataset , period = 7 , figure_size=20
     plt.close('all')
 
 
+def plot_all( total_cases, increased_case, yhat, country = "Taiwan"):
+    
+### Plotting
+
+    predicted_cases = np.concatenate((total_cases[:,0], yhat + total_cases[-1,0]))
+
+    figure = plt.figure(figsize=(10,10))
+
+    plt.subplot(2,2,1)
+    plt.title("Original Total Cases")
+    plt.plot(total_cases)
+    plt.subplot(2,2,2)
+    plt.plot(increased_case.dropna())
+    plt.title("Increased case")
+
+#     predicted_cases = np.concatenate((total_cases[:,0], yhat + total_cases[-1,0]))
+    plt.subplot(2,2,3)
+    plt.plot(predicted_cases)
+    plt.title("Total Cases and forcasted")
+
+
+    plt.subplot(2,2,4)
+    plt.plot(yhat)
+    plt.xticks(rotation=90)
+    plt.title("yhat")
+    
+    plt.savefig("img/" + str(country)+ "_all_charts.png")
+    plt.close('all')
+
+    
 # cumulated_confirmed_country = cumulated_confirmed.groupby("Country/Region")
 # cumulated_confirmed_country = cumulated_confirmed_country.aggregate(np.sum)  
 # cumulated_confirmed_country.reset_index(level=0, inplace=True) 
