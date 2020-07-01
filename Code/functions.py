@@ -8,6 +8,9 @@ import dash_core_components as dcc
 import dash_html_components as html
 import plotly.graph_objects as go
 from dash.dependencies import Input, Output 
+from pandas.plotting import register_matplotlib_converters
+
+register_matplotlib_converters()
 
 def df_to_timeseries(single_country, period ):
     
@@ -27,16 +30,7 @@ def df_to_timeseries(single_country, period ):
     instance_array = instance_array[1:].astype(int) 
     
     return instance_array, difference_list
-
-# def df_to_timeseries_countries(country):
-#     instance = np.asarray(single_country.drop(["Province/State","Country/Region","Lat","Long"],axis = 1).transpose()) 
-#     difference_list = []
-#     for i in range(0 , len(instance)-1):
-#         difference_list.append( int(instance[i+1]) - int(instance[i]) ) 
-
-#     return instance, difference_list
-      
-    
+ 
 def df_groupby_countries( df ):
     
     df_country = df.groupby("Country/Region")
@@ -66,8 +60,9 @@ def plt_all_cases_increase_cases(country , dataset , period = 7 , figure_size=20
     plt.title("Increased Cases from " + str(country))
     
     #figure.autofmt_xdate()
-    plt.savefig("img/" +  str(country) + "_all_w_increased_cases" +".png", bbox_inches='tight')
-    
+#     plt.savefig("img/" +  str(country) + "_all_w_increased_cases" +".png", bbox_inches='tight')
+    plt.savefig("img/" +  str(country) + "_all_w_increased_cases" +".png")
+  
     plt.close('all')
 
 
@@ -82,11 +77,13 @@ def plot_all( total_cases, increased_case, yhat, country = "Taiwan"):
     plt.subplot(2,2,1)
     plt.title("Original Total Cases")
     plt.plot(total_cases)
+    
     plt.subplot(2,2,2)
     plt.plot(increased_case.dropna())
     plt.title("Increased case")
-
-#     predicted_cases = np.concatenate((total_cases[:,0], yhat + total_cases[-1,0]))
+    plt.xticks(rotation=45)
+    plt.xticks(np.arange(0, len(increased_case.dropna()), (len(increased_case.dropna()) / 10))) 
+    
     plt.subplot(2,2,3)
     plt.plot(predicted_cases)
     plt.title("Total Cases and forcasted")
@@ -97,11 +94,6 @@ def plot_all( total_cases, increased_case, yhat, country = "Taiwan"):
     plt.xticks(rotation=90)
     plt.title("yhat")
     
-    plt.savefig("img/" + str(country)+ "_all_charts.png")
+    plt.savefig("img/" + str(country)+ "_all_charts.png",  bbox_inches='tight')
     plt.close('all')
-
-    
-# cumulated_confirmed_country = cumulated_confirmed.groupby("Country/Region")
-# cumulated_confirmed_country = cumulated_confirmed_country.aggregate(np.sum)  
-# cumulated_confirmed_country.reset_index(level=0, inplace=True) 
-# cumulated_confirmed_country
+ 
