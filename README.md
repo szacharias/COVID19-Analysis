@@ -22,6 +22,7 @@ The whole project will take up a span of 9 weeks. In this duration i will attemp
 
 
 ## Objectives
+1. Implement time series model integrated with sentiment analysis to predict future outbreaks before hand, and even possibly when we can come out of qurantine. 
 
 ## Environment and Build
 I am running on Ubuntu 19.10(x86_64) with Jupyter Lab(Jupyter notebook would suffice for testing the code) with python 3.7.4. Further inspections can be seen [here!](https://github.com/szacharias/COVID19-Analysis/blob/master/Code/Environment.ipynb) <br>
@@ -45,13 +46,15 @@ pip install -r ./code/requirements.txt
 
 
 ## Progress
-Week 1, June 11th / June 18th
+**Week 1, June 11th / June 18th**
 - [X] Github Markdown
 - [X] Read provided sources
 - [X] Start implementations
-Week 2, June 19th / June 26th
-- [ ] Data Cleaning
-- [ ] EDA
+**Week 2, June 19th / June 26th**
+- [X] Data Cleaning
+- [X] EDA
+- [ ] Sentiment Analysis integrated with Time Series Analysis(how to quantify the sentiment value into the time series model)
+
 
 
 ## Sources 
@@ -62,7 +65,6 @@ Week 2, June 19th / June 26th
 - [Epidemic Modeling 3 - Confindence Intervals and Stochastic Effects](https://medium.com/data-for-science/epidemic-modeling-103-adding-confidence-intervals-and-stochastic-effects-to-your-covid-19-models-be618b995d6b)
 
 - [Epidemic Modeling 4 - Seasonal Effects](https://medium.com/data-for-science/epidemic-modeling-104-impact-of-seasonal-effects-on-covid-19-16a1b14056f)
-
 
 - [COVID-19 Data Source](https://www.kaggle.com/lisphilar/covid-19-data-with-sir-model)
 
@@ -80,7 +82,29 @@ Week 2, June 19th / June 26th
 
 - [COVID-19 and the first war of data science](https://medium.com/starschema-blog/covid-19-and-the-first-war-of-data-science-980798f075ef)
 
-- []()
+- [Time series infused with Event based algorithm](https://www.sciencedirect.com/science/article/pii/S0020025515000067)
+
+- [Times series method in Python](https://machinelearningmastery.com/time-series-forecasting-methods-in-python-cheat-sheet/)
+
+- [Deep Learning and Times Series](https://machinelearningmastery.com/start-here/#deep_learning_time_series)
+
+- [Outbreak Prediction in Python](https://www.codespeedy.com/covid-19-outbreak-prediction-using-machine-learning-in-python/)
+
+- [Using time series and sentiment analysis to forecast bitcoin prices](https://aisel.aisnet.org/cgi/viewcontent.cgi?article=1017&context=mcis2015)
+
+- [Predicting Stock Returns using Sentiment analysis and LSTM](https://yujingma.com/2016/11/27/predicting-stock-returns-with-sentiment-analysis-and-lstm/)
+
+- [Stock Prediction Using Twitter Sentiment Analysis](http://cs229.stanford.edu/proj2011/GoelMittal-StockMarketPredictionUsingTwitterSentimentAnalysis.pdf)
+```
+The technique used in this paper builds directly on the oneused by Bollen et al. [1]. 
+The raw DJIA values are first fedinto the preprocessor to obtain the processed values. 
+At thesame time, the tweets are fed to the sentiment analysis algo-rithm which outputs mood values for the four mood classesfor each day. 
+These moods and the processed DJIA valuesare then fed to our model learning framework which usesSOFNN to learn a model to predict future DJIA values us-ing them. 
+The learnt model as well as the previous DJIA andmood values are used by the portfolio management systemwhich runs the model to predict the future value and usesthe predicted values to make appropriate buy/sell decisions. 
+```
+
+- [Estimate Incubation Period of COVID19](https://www.acc.org/latest-in-cardiology/journal-scans/2020/05/11/15/18/the-incubation-period-of-coronavirus-disease)
+
 #### Datasets
 - [John Hopkins Dataset](https://github.com/CSSEGISandData/COVID-19/)
 

@@ -13,6 +13,10 @@
 - Progress checkup every friday. 1 page pdf. i inch margin, 11pt, Times New Roman, 1.5 spacing. Regarding progress and next week's anticipation
 - 
 
+### Notes
+- Sentiment analysis is commmonly implemented with SVM
+
+
 ## Sources 
 - [Epidemic Modeling](https://medium.com/data-for-science/epidemic-modeling-101-or-why-your-covid19-exponential-fits-are-wrong-97aa50c55f8)
 <br>
