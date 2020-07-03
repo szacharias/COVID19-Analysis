@@ -82,7 +82,7 @@ def plot_all( total_cases, increased_case, yhat, country = "Taiwan"):
     plt.plot(increased_case.dropna())
     plt.title("Increased case")
     plt.xticks(rotation=45)
-    plt.xticks(np.arange(0, len(increased_case.dropna()), (len(increased_case.dropna()) / 10))) 
+    plt.xticks(np.arange(0, len(increased_case.dropna()), (len(increased_case.dropna()) / 7))) 
     
     plt.subplot(2,2,3)
     plt.plot(predicted_cases)

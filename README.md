@@ -105,6 +105,8 @@ The learnt model as well as the previous DJIA andmood values are used by the por
 
 - [Estimate Incubation Period of COVID19](https://www.acc.org/latest-in-cardiology/journal-scans/2020/05/11/15/18/the-incubation-period-of-coronavirus-disease)
 
+- [How to Tune ARIMA Parameters in Python](https://machinelearningmastery.com/tune-arima-parameters-python/)
+
 #### Datasets
 - [John Hopkins Dataset](https://github.com/CSSEGISandData/COVID-19/)
 
