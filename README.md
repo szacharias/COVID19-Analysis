@@ -51,10 +51,13 @@ pip install -r ./code/requirements.txt
 - [X] Read provided sources
 - [X] Start implementations
 <br>
+
 **Week 2, June 19th / June 26th**
 - [X] Data Cleaning
 - [X] EDA
 - [X] Time Series Analysis(how to quantify the sentiment value into the time series model) 
+<br>
+
 **Week 3, June 27th / July 3th** 
 - [ ] GRU + LSTM
 - [ ] Sentiment Analysis
