@@ -22,7 +22,7 @@ The whole project will take up a span of 9 weeks. In this duration i will attemp
 
 
 ## Objectives
-1. Implement time series model integrated with sentiment analysis to predict future outbreaks before hand, and even possibly when we can come out of qurantine. 
+1. Implement time series model integrated with sentiment analysis to predict **future outbreaks** before hand, and even possibly when we can come out of qurantine. 
 
 ## Environment and Build
 I am running on Ubuntu 19.10(x86_64) with Jupyter Lab(Jupyter notebook would suffice for testing the code) with python 3.7.4. Further inspections can be seen [here!](https://github.com/szacharias/COVID19-Analysis/blob/master/Code/Environment.ipynb) <br>
