@@ -65,7 +65,6 @@ def plt_all_cases_increase_cases(country , dataset , period = 7 , figure_size=20
     #figure.autofmt_xdate()
 #     plt.savefig("img/" +  str(country) + "_all_w_increased_cases" +".png", bbox_inches='tight')
     plt.savefig("img/" +  str(country) + "_all_w_increased_cases" +".png")
-  
     plt.close('all')
 
 
@@ -97,16 +96,28 @@ def plot_all( total_cases, increased_case, yhat, country = "Taiwan"):
     
     plt.savefig("img/" + str(country)+ "_all_charts.png",  bbox_inches='tight')
     plt.close('all')
- 
-def SARIMA_PREDICT(cases, title, order_tuple = (1,1,1)):
+    
+def SARIMA_PREDICT(cases, title , is_increase_case = False , order_tuple = (1,1,1), seasonal_tuple = (1,1,1,1), fit_param = (False, False )):
     initial_size = int(len(cases) * 1 / 3)
     train, test  =  cases[0:initial_size], cases[initial_size:len(cases)]
     history = [x for x in train]
     SARIMA_predictions = []
     
+    
+    model = SARIMAX(history, order = order_tuple )
+    model_fit = model.fit(disp=False, transparams=False) 
+    if not is_increase_case:    
+        model = SARIMAX(history, order = order_tuple, seasonal_order=(1, 1, 1, 1))
+        model_fit = model.fit(disp=fit_param[0], transparams=fit_param[1]) 
+        
     for t in range(len(test)):
-        model = SARIMAX(history, order = order_tuple)
+        
+        model = SARIMAX(history, order = order_tuple )
         model_fit = model.fit(disp=False, transparams=False) 
+        if not is_increase_case:    
+            model = SARIMAX(history, order = order_tuple, seasonal_order=(1, 1, 1, 1))
+            model_fit = model.fit(disp=fit_param[0], transparams=fit_param[1]) 
+        
         yhat = model_fit.forecast()[0]
         SARIMA_predictions.append(yhat)
         history.append(test[t])
@@ -119,4 +130,4 @@ def SARIMA_PREDICT(cases, title, order_tuple = (1,1,1)):
     plt.plot(SARIMA_predictions)
     
     plt.legend(['Actual' , 'Predicted']) 
-    return SARIMA_predictions
+    return SARIMA_predictions, model_fit
