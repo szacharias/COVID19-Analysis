@@ -2,13 +2,16 @@ import pandas
 from matplotlib import pyplot as plt
 import seaborn
 import sklearn
+from sklearn.metrics import mean_squared_error
 import numpy as np
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
 import plotly.graph_objects as go
+from math import sqrt
 from dash.dependencies import Input, Output 
 from pandas.plotting import register_matplotlib_converters
+from statsmodels.tsa.statespace.sarimax import SARIMAX
 
 register_matplotlib_converters()
 
@@ -67,11 +70,9 @@ def plt_all_cases_increase_cases(country , dataset , period = 7 , figure_size=20
 
 
 def plot_all( total_cases, increased_case, yhat, country = "Taiwan"):
-    
-### Plotting
-
-    predicted_cases = np.concatenate((total_cases[:,0], yhat + total_cases[-1,0]))
-
+### Plottinㄕ
+#     predicted_cases = np.concatenate((total_cases[:,0], yhat + total_cases[-1,0]))
+    predicted_cases = np.concatenate((total_cases[:,0],  yhat)) 
     figure = plt.figure(figsize=(10,10))
 
     plt.subplot(2,2,1)
@@ -97,3 +98,25 @@ def plot_all( total_cases, increased_case, yhat, country = "Taiwan"):
     plt.savefig("img/" + str(country)+ "_all_charts.png",  bbox_inches='tight')
     plt.close('all')
  
+def SARIMA_PREDICT(cases, title, order_tuple = (1,1,1)):
+    initial_size = int(len(cases) * 1 / 3)
+    train, test  =  cases[0:initial_size], cases[initial_size:len(cases)]
+    history = [x for x in train]
+    SARIMA_predictions = []
+    
+    for t in range(len(test)):
+        model = SARIMAX(history, order = order_tuple)
+        model_fit = model.fit(disp=False, transparams=False) 
+        yhat = model_fit.forecast()[0]
+        SARIMA_predictions.append(yhat)
+        history.append(test[t])
+    rmse = sqrt(mean_squared_error(test, SARIMA_predictions)) / len(cases)
+    print('Test RMSE: %.3f' % rmse)
+
+    figure = plt.figure(figsize=(20,10))
+    plt.title(title) 
+    plt.plot(test)  
+    plt.plot(SARIMA_predictions)
+    
+    plt.legend(['Actual' , 'Predicted']) 
+    return SARIMA_predictions
