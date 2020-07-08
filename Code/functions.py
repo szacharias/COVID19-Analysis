@@ -131,3 +131,41 @@ def SARIMA_PREDICT(cases, title , is_increase_case = False , order_tuple = (1,1,
     
     plt.legend(['Actual' , 'Predicted']) 
     return SARIMA_predictions, model_fit
+
+
+## this does not predict the past fourteen days for verification uses
+def SARIMA_PREDICT_edit(cases, title , is_increase_case = False , order_tuple = (1,1,1), seasonal_tuple = (1,1,1,1), fit_param = (False, False )):
+    initial_size = int(len(cases) * 1 / 3)
+    train, test  =  cases[0:initial_size], cases[initial_size:len(cases)-14]
+    history = [x for x in train]
+    SARIMA_predictions = []
+    
+    test_length = len(test) 
+    
+    model = SARIMAX(history, order = order_tuple )
+    model_fit = model.fit(disp=False, transparams=False) 
+    if not is_increase_case:    
+        model = SARIMAX(history, order = order_tuple, seasonal_order=(1, 1, 1, 1))
+        model_fit = model.fit(disp=fit_param[0], transparams=fit_param[1]) 
+        
+    for t in range(test_length):
+        
+        model = SARIMAX(history, order = order_tuple )
+        model_fit = model.fit(disp=False, transparams=False) 
+        if not is_increase_case:    
+            model = SARIMAX(history, order = order_tuple, seasonal_order=(1, 1, 1, 1))
+            model_fit = model.fit(disp=fit_param[0], transparams=fit_param[1]) 
+        
+        yhat = model_fit.forecast()[0]
+        SARIMA_predictions.append(yhat)
+        history.append(test[t])
+    rmse = sqrt(mean_squared_error(test, SARIMA_predictions)) / test_length
+    print('Test RMSE: %.3f' % rmse)
+
+    figure = plt.figure(figsize=(20,10))
+    plt.title(title) 
+    plt.plot(test)  
+    plt.plot(SARIMA_predictions)
+    
+    plt.legend(['Actual' , 'Predicted']) 
+    return SARIMA_predictions, model_fit
