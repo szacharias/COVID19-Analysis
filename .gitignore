@@ -8,3 +8,5 @@ Data/.ipynb_checkpoints/
 Code/img/
 
 Code/__pycache__/
+
+*.csv#
