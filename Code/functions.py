@@ -1,4 +1,4 @@
-import pandas
+import pandas 
 from matplotlib import pyplot as plt
 import seaborn
 import sklearn
@@ -8,10 +8,16 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 import plotly.graph_objects as go
+from numpy import array
 from math import sqrt
 from dash.dependencies import Input, Output 
 from pandas.plotting import register_matplotlib_converters
 from statsmodels.tsa.statespace.sarimax import SARIMAX
+
+from keras.models import Sequential
+from keras.layers import LSTM
+from keras.layers import Dense
+
 
 register_matplotlib_converters()
 
@@ -169,3 +175,69 @@ def SARIMA_PREDICT_edit(cases, title , is_increase_case = False , order_tuple = 
     
     plt.legend(['Actual' , 'Predicted']) 
     return SARIMA_predictions, model_fit
+
+def split_sequences(sequences, n_steps_in, n_steps_out):
+	X, y = list(), list()
+	for i in range(len(sequences)):
+		# find the end of this pattern
+		end_ix = i + n_steps_in
+		out_end_ix = end_ix + n_steps_out
+		# check if we are beyond the dataset
+		if out_end_ix > len(sequences):
+			break
+		# gather input and output parts of the pattern
+		seq_x, seq_y = sequences[i:end_ix, :], sequences[end_ix:out_end_ix, :]
+		X.append(seq_x)
+		y.append(seq_y)
+	return array(X), array(y)
+
+def split_sequence(sequence, n_steps):
+    X, y = list(), list()
+    for i in range(len(sequence)):
+        # find the end of this pattern
+        end_ix = i + n_steps
+        # check if we are beyond the sequence
+        if end_ix > len(sequence)-1:
+            break
+        # gather input and output parts of the pattern
+        seq_x, seq_y = sequence[i:end_ix], sequence[end_ix]
+        X.append(seq_x) 
+        y.append(seq_y)
+    return array(X), array(y)
+
+def train_test_split_timeseries(week_feature, week_target):
+    feature_train = week_feature[:-8]
+    target_train  = week_target[:-8]
+    feature_test  = week_feature[-8:-1]
+    target_test   = week_target[-8: -1]
+    return   feature_train, target_train , feature_test , target_test  
+    
+    
+def LSTM_PREDICT(feature, target , test_feature, test_target , n_features, n_steps):
+    feature = feature.reshape((feature.shape[0], feature.shape[1], n_features)) 
+    # define model
+    model = Sequential()
+    model.add(LSTM(50, activation='relu', input_shape=(n_steps, n_features),  return_sequences=True, ))
+    model.add(LSTM(50, activation='relu'))    
+    model.add(Dense(1))
+    model.compile(optimizer='adam', loss='mse')
+    
+    # fit model
+    model.fit(feature, target , epochs=200, verbose=0)
+    
+    predicted = []
+    
+    for i in range(0 , len(test_target)):
+        
+        # demonstrate prediction  
+        test_input = test_feature[i].reshape((1, n_steps, n_features)) 
+        yhat = model.predict(test_input, verbose=0) 
+        predicted.append(np.array(yhat)[0])
+        
+    rmse = sqrt(mean_squared_error(test_target, predicted))   / len(test_target)
+    
+    plt.plot(test_target)
+    plt.plot(predicted)
+    plt.legend(["real" , "predicted"])
+#     plt.savefig("Standard  LSTM Only Model.png")
+    return rmse
