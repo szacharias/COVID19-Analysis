@@ -141,6 +141,7 @@ def SARIMA_PREDICT(cases, title , is_increase_case = False , order_tuple = (1,1,
 
 ## this does not predict the past fourteen days for verification uses
 def SARIMA_PREDICT_edit(cases, title , is_increase_case = False , order_tuple = (1,1,1), seasonal_tuple = (1,1,1,1), fit_param = (False, False )):
+    
     initial_size = int(len(cases) * 1 / 3)
     train, test  =  cases[0:initial_size], cases[initial_size:len(cases)-14]
     history = [x for x in train]
