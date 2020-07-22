@@ -114,6 +114,14 @@ The learnt model as well as the previous DJIA andmood values are used by the por
 
 - [How to Tune ARIMA Parameters in Python](https://machinelearningmastery.com/tune-arima-parameters-python/)
 
+- [Sentiment Analysis with python part 1](#https://towardsdatascience.com/sentiment-analysis-with-python-part-1-5ce197074184)
+
+- [COVID19 Sentiment analysis ](#https://towardsdatascience.com/covid-19-sentiment-analysis-series-part-1-getting-started-70892122630c)
+
+- [Subjectivity Analysis](#https://github.com/tomsharp/coronavirus-news/blob/master/Subjectivity%20Analysis.ipynb)
+
+- [COVID19 News: Are they overracting?](#https://towardsdatascience.com/coronavirus-in-the-news-are-they-overreacting-8b88da5f4afa)
+
 #### Datasets
 - [John Hopkins Dataset](https://github.com/CSSEGISandData/COVID-19/)
 
