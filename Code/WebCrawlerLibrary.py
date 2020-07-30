@@ -5,6 +5,11 @@ import pandas as pd
 import numpy as np 
 from datetime import datetime, timedelta
 
+def query_start_date(api_content):
+    last_queried_date = api_content.sort_values(['PublishedTime'],ascending = False)['PublishedTime'].array[0]
+    query_start_date = datetime.strptime(last_queried_date, "%Y-%m-%d")
+    return query_start_date
+
 
 def extract_data_from_api(output):
     return_list = []
