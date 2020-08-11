@@ -1,0 +1,22 @@
+
+keras==2.4.3
+tensorboard==2.2.2  
+nltk==3.5 
+pandas==0.25.3
+textblob
+tensorflow==2.2.0
+
+#"tensorflow"
+#"keras"
+#"TextBlob"
+#"nltk"
+#"COVID19Py"
+
+# numpy
+
+# nltk.download('averaged_perceptron_tagger')
+# nltk.download('punkt')
+# nltk.download('brown')
+# nltk.download('wordnet')
+# nltk.download('movie_reviews')
+# nltk.download('vader_lexicon')
