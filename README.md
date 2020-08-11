@@ -40,6 +40,28 @@ pip install -r ./code/requirements.txt
 ```
  <br>
 
+## How to run the Dash App
+prerequisites : Python 3.X , Anaconda<br>
+
+1. To start, we will will start a virtual environment to make sure everything will work as planned
+```
+conda env list
+conda create -n msah python=3.7.4
+conda activate msah
+```
+
+***When finished, use ```conda deactivate``` to close the virtual environment, and ```conda env remove -n msah``` to delete the virtual environment <br>***
+
+Next we will start setting up the environment
+
+2. navigate to requirements.txt
+```
+cd ./COVID19-Analysis
+pip install -r requirements.txt
+```
+When everything has finished running and installing, then the rest of teh project should be ready to run. You can now decide to go through each individual Jupyer Notebooks, or to use the Dash dashboard. 
+
+
 
 ## Findings Summary 
 
@@ -121,6 +143,8 @@ The learnt model as well as the previous DJIA andmood values are used by the por
 - [Subjectivity Analysis](#https://github.com/tomsharp/coronavirus-news/blob/master/Subjectivity%20Analysis.ipynb)
 
 - [COVID19 News: Are they overracting?](#https://towardsdatascience.com/coronavirus-in-the-news-are-they-overreacting-8b88da5f4afa)
+
+
 
 #### Datasets
 - [John Hopkins Dataset](https://github.com/CSSEGISandData/COVID-19/)

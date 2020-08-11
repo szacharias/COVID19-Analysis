@@ -171,23 +171,39 @@ def SARIMA_PREDICT_edit(cases, title , is_increase_case = False , order_tuple = 
 
     figure = plt.figure(figsize=(20,10))
     plt.title(title) 
-    plt.plot(test)  
-    plt.plot(SARIMA_predictions)
+    plt.plot(test[-7:])  
+    plt.plot(SARIMA_predictions[-7:])
     
     plt.legend(['Actual' , 'Predicted']) 
     return SARIMA_predictions, model_fit
 
-def split_sequences(sequences, n_steps_in, n_steps_out):
+# def split_sequences(sequences, n_steps_in, n_steps_out):
+# 	X, y = list(), list()
+# 	for i in range(len(sequences)):
+# 		# find the end of this pattern
+# 		end_ix = i + n_steps_in
+# 		out_end_ix = end_ix + n_steps_out
+# 		# check if we are beyond the dataset
+# 		if out_end_ix > len(sequences):
+# 			break
+# 		# gather input and output parts of the pattern
+# 		seq_x, seq_y = sequences[i:end_ix, :], sequences[end_ix:out_end_ix, :]
+# 		X.append(seq_x)
+# 		y.append(seq_y)
+# 	return array(X), array(y)
+
+#### Multivariate mutitimestep LSTM
+def split_sequences_three(sequences, n_steps_in, n_steps_out):
 	X, y = list(), list()
 	for i in range(len(sequences)):
 		# find the end of this pattern
 		end_ix = i + n_steps_in
-		out_end_ix = end_ix + n_steps_out
+		out_end_ix = end_ix + n_steps_out-1
 		# check if we are beyond the dataset
 		if out_end_ix > len(sequences):
 			break
 		# gather input and output parts of the pattern
-		seq_x, seq_y = sequences[i:end_ix, :], sequences[end_ix:out_end_ix, :]
+		seq_x, seq_y = sequences[i:end_ix, :-1], sequences[end_ix-1:out_end_ix, -1]
 		X.append(seq_x)
 		y.append(seq_y)
 	return array(X), array(y)
@@ -203,6 +219,20 @@ def split_sequence(sequence, n_steps):
         # gather input and output parts of the pattern
         seq_x, seq_y = sequence[i:end_ix], sequence[end_ix]
         X.append(seq_x) 
+        y.append(seq_y)
+    return array(X), array(y)
+
+def split_sequences(sequences, n_steps):
+    X, y = list(), list()
+    for i in range(len(sequences)):
+        # find the end of this pattern
+        end_ix = i + n_steps
+        # check if we are beyond the dataset
+        if end_ix > len(sequences):
+            break
+        # gather input and output parts of the pattern
+        seq_x, seq_y = sequences[i:end_ix, :-1], sequences[end_ix-1, -1]
+        X.append(seq_x)
         y.append(seq_y)
     return array(X), array(y)
 
