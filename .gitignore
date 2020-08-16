@@ -10,3 +10,7 @@ Code/img/
 Code/__pycache__/
 
 *.csv#
+
+App/.ipynb_checkpoints/
+
+App/__pycache__/

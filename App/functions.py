@@ -137,7 +137,8 @@ def SARIMA_PREDICT(cases, title , is_increase_case = False , order_tuple = (1,1,
     figure = plt.figure(figsize=(20,10))
     plt.title(title) 
     plt.plot(test)  
-    plt.plot(SARIMA_predictions)
+    plt.plot(SARIMA_predictions) 
+    plt.savefig("./img/" +str(title) + ".png")
     
     plt.legend(['Actual' , 'Predicted']) 
     return SARIMA_predictions, model_fit
