@@ -26,6 +26,8 @@ datetime_format = "%Y-%m-%d"
 
 today = datetime.now().strftime(datetime_format)
 
+debug_mode = True
+
 # baseURL = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/"
 # image_directory =  os.getcwd()
 # image_filename = image_directory + '/FinalModelPrediction.png' 
@@ -70,6 +72,14 @@ markdown_introduction = '''
  ---
 '''
 
+markdown_abstract = '''
+This is a project built with the intention of predicting the trend of COVID-19/Coronavirus using sentiment analysis and other machine learning algorithms.  
+Sentiment Analysis is commonly used to support stock prediction as the common sentiment usually represents the public's tendency to buy/sell.  
+In this case however, i'm using sentiment analysis as we don't know how each events affect the pandemic(eg. Quarantine, BLM protests...etc), but what we do know what the general thought on
+the events/news will be, therefore can be considered as a supporting feature to predict the trend of the pandemic.  
+  
+'''
+
 markdown_index = '''
 ### Index
 1. Raw Time Series Data
@@ -91,15 +101,38 @@ markdown_split = '''
 ---
 '''
 
+markdown_ch1_intro = '''
+**This section mainly illustrates the infected/death count for every countries listed.  
+Some specific countries that have listed data for each specific states will have the option to select the states in the dropdown menu.**    
+  
+The graph on the left illustrates the real number for each category and country.  
+The graph on the right illustrates the changes in infected/death count, the number is processed on a 7 day difference.  
+'''
+
+markdown_ch2_intro = '''
+**Section 2 is focused on the Sentiment Analysis side of things, mainly illustrating the raw news and it's details,  
+the followed by the cleaned news with the sentiment value for each news, based on two different libraries and on the _Title_ and _Description_**  
+Wordclouds are not supported by Dash/Plotly, images of word clouds are located within  
+1) the Code/Img folder  
+2) the Jupyter notebook in the Code folder
+'''
+
+markdown_ch3_intro = '''
+**Section 3 is mainly about the models i've built, and the visualization of the performance.  
+**  
+'''
+
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 app.layout = html.Div(
     style={ 'font-family':"Courier New, monospace" },
     children=[
         html.H1('Coronavirus Infection Prediction in the United States'),
         dcc.Markdown(children = markdown_introduction),
+        dcc.Markdown(children = markdown_abstract),
         dcc.Markdown(children = markdown_index),
         ################# Chapter 1 #################
         dcc.Markdown(children = markdown_chapter_1),
+        dcc.Markdown(children = markdown_ch1_intro),
         html.Div(className="row", children=[
             html.Div(className="three columns", children=[
                 html.H5('Country'),
@@ -135,6 +168,7 @@ app.layout = html.Div(
         ################# Chapter 2 #################
         dcc.Markdown(children = markdown_split),
         dcc.Markdown(children = markdown_chapter_2),
+        dcc.Markdown(children = markdown_ch2_intro),
         html.H4("1. News by Date"),
         #### News' Date select
         html.Div(className="row", children=[
@@ -266,5 +300,5 @@ def sentiment_news_display(news_sentiment_date):
 server = app.server
 
 if __name__ == '__main__':
-    app.run_server(host="0.0.0.0", debug = True)
+    app.run_server(host="0.0.0.0", debug = debug_mode)
 
