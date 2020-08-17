@@ -1,0 +1,5 @@
+conda create -n msah python=3.7.4.
+conda activate msah
+pip install -r requirements.txt
+conda deactivate
+conda env remove msah
