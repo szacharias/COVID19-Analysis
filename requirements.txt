@@ -1,6 +1,6 @@
 numpy==1.19.1
 Keras==2.4.3
-requests==2.24.0
+requests==2.31.0
 pandas==0.25.3
 dash==1.14.0
 dash_core_components==1.10.2
